@@ -1,0 +1,8 @@
+
+[tool.mypy]
+plugins = [
+    "../pyside_callbacks_mypy/plugin.py"
+]
+[[tool.mypy.overrides]]
+module = "main_win"
+ignore_errors = true

@@ -1,0 +1,57 @@
+[tool.pdm]
+[tool.pdm.dev-dependencies]
+example = [
+    "pyside6>=6.5.0",
+]
+dev = [
+    "mypy>=1.1.1",
+    "ruff>=0.0.260",
+]
+
+[project]
+name = "pyside_callbacks"
+version = "0.1.0"
+description = "Use decorators to simplify using ui flow for PySide"
+authors = [
+    {name = "Spencer Chang", email = "spencer@sycee.xyz"},
+]
+dependencies = []
+requires-python = ">=3.10,<3.12"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["pyside_callbacks"]
+packages = ["pyside_callbacks_mypy"]
+
+[tool.setuptools.package-data]
+"*" = ["py.typed"]
+
+[tool.ruff]
+select = [
+    "E",
+    "F",
+    "W",
+    "YTT",
+    "UP",
+    "TCH",
+    "TID",
+    "I",
+    "N",
+    "ANN",
+    "PIE"
+]
+ignore = [
+    "ANN101",  # Missing type annotation for `self` in method
+    "ANN401"   # Dynamically typed expressions (typing.Any) are disallowed
+]
+exclude = ["main_win.py"]
+line-length = 120
+
+[tool.ruff.isort]
+force-single-line = true
+force-sort-within-sections = true
