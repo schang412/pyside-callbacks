@@ -1,6 +1,6 @@
 # pyside-callbacks
 
-[![Actions status](https://github.com/schang412/pyside-callbacks/workflows/regression-tests/badge.svg)](https://github.com/schang412/pyside-callbacks/actions)
+[![Actions status](https://github.com/schang412/pyside-callbacks/workflows/CI/badge.svg)](https://github.com/schang412/pyside-callbacks/actions)
 [![pdm-managed](https://img.shields.io/badge/pdm-managed-blueviolet)](https://pdm.fming.dev)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
 
