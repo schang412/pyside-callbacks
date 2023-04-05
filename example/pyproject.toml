@@ -1,7 +1,7 @@
 
 [tool.mypy]
 plugins = [
-    "../pyside_callbacks_mypy/plugin.py"
+    "pyside_callbacks_mypy.plugin"
 ]
 [[tool.mypy.overrides]]
 module = "main_win"
