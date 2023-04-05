@@ -10,7 +10,7 @@ dev = [
 
 [project]
 name = "pyside-callbacks"
-version = "0.1.0"
+version = "0.1.1"
 description = "Use decorators to simplify using UI creation flow for PySide"
 readme = "README.md"
 license = {text = "MIT"}
@@ -41,8 +41,11 @@ requires = [
 ]
 
 [tool.setuptools]
-py-modules = ["pyside_callbacks"]
-packages = ["pyside_callbacks_mypy"]
+packages = ["pyside_callbacks", "pyside_callbacks_mypy"]
+
+[tool.setuptools.package-data]
+pyside_callbacks = ["py.typed"]
+pyside_callbacks_mypy = ["signals.toml"]
 
 [tool.ruff]
 target-version = "py310"

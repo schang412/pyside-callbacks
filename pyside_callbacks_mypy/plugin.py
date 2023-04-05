@@ -1,5 +1,5 @@
 from collections.abc import Callable
-import os
+from importlib.resources import files
 
 from mypy import errorcodes as codes
 from mypy import nodes
@@ -27,8 +27,7 @@ import tomli
 
 
 def _read_available_signals() -> dict[str, dict[str, list[str]]]:
-    with open(os.path.join(os.path.dirname(__file__), "signals.toml"), "rb") as f:
-        return tomli.load(f)
+    return tomli.loads(files('pyside_callbacks_mypy').joinpath('signals.toml').read_text())
 
 
 def _class_instance_var(ctx: ClassDefContext, query: StrExpr) -> Type | None:
@@ -174,7 +173,7 @@ class CustomPlugin(Plugin):
     def get_class_decorator_hook(
         self, fullname: str
     ) -> Callable[[ClassDefContext], None] | None:
-        if fullname == "pyside_callbacks.pyside_callbacks":
+        if "pyside_callbacks.pyside_callbacks" in fullname:
             return verify_callback_signatures
         return None
 
