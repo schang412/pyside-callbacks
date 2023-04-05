@@ -11,15 +11,27 @@ dev = [
 [project]
 name = "pyside-callbacks"
 version = "0.1.0"
-description = "Use decorators to simplify using ui flow for PySide"
+description = "Use decorators to simplify using UI creation flow for PySide"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
     {name = "Spencer Chang", email = "spencer@sycee.xyz"},
 ]
 requires-python = ">=3.10,<3.12"
+classifiers = [
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Software Development",
+  "Typing :: Typed",
+]
 dependencies = [
 ]
+urls = {repository = "https://github.com/schang412/pyside-callbacks"}
 
 [build-system]
 build-backend = "setuptools.build_meta"
